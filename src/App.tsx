@@ -1,8 +1,12 @@
-import React from 'react';
+import React, {useState} from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { Query } from "react-apollo";
+import NPMQueryContainer from "./components/Search";
+type AppProps = { packageName: string}
 
 function App() {
+const [packageName, setPackageName] = useState('')
   return (
     <div className="App">
       <header className="App-header">
@@ -19,6 +23,9 @@ function App() {
           Learn React
         </a>
       </header>
+      <main>
+        <NPMQueryContainer packageName={packageName}></NPMQueryContainer>
+        </main>
     </div>
   );
 }
