@@ -47,6 +47,7 @@ export default function NPMQueryContainer({ packageName }: AppProps) {
     return <div>Loading...</div>;
   }
   if (error) {
+    console.log('error', error)
     return <div>Uh oh, something went wrong!</div>;
   }
 //   const {
@@ -58,5 +59,5 @@ export default function NPMQueryContainer({ packageName }: AppProps) {
 //     return <div>No npm package for {packageName}</div>;
   // }
   // return <Card data={{ npm: npmPackage }}></Card>;
-  
+
 }
